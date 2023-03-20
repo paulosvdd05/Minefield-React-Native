@@ -16,6 +16,14 @@ export default props => {
 const styles = StyleSheet.create({
     field: {
         height: params.blockSize,
-        width: params.blockSize
+        width: params.blockSize,
+        borderWidth: params.borderSize,
+    },
+    regular: {
+        backgroundColor: '#999',
+        borderLeftColor: '#CCC',
+        borderTopColor: '#CCC',
+        borderRightColor: '#333',
+        borderBottomColor: '#333'
     }
 })
