@@ -3,13 +3,13 @@ import { Platform, StyleSheet, Text, View } from "react-native";
 import params from "./src/params";
 import Field from "./src/components/Field";
 
+
 export default class App extends Component {
   render() {
     return (
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>Iniciando o Mines!</Text>
         <Text style={styles.sectionDescription}>Tamanho da grade: {params.getRowsAmout()} x {params.getColomnsAmount()}</Text>
-
         <Field />
         <Field opened />
         <Field opened nearMines={1}/>
@@ -19,6 +19,8 @@ export default class App extends Component {
         <Field mined />
         <Field mined opened/>
         <Field mined opened exploded/>
+        <Field flagged />
+        <Field flagged opened />
       </View>
     )
   }
