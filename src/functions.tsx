@@ -81,4 +81,11 @@ const openField = (board, row, column) => {
     }
 }
 
+const fields = board => [].concat(...board)
+const hadExplosion = board => fields(board)
+    .filter(field => field.exploded).length > 0
+const pendding = field => (field.mined && !field.falgged)
+    || (!field.mined && !field.opened)
+const wonGame = board => fields(board).filter(pendding).length === 0
+
 export {createMinedBoard}
