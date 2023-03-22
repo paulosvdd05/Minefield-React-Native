@@ -87,5 +87,13 @@ const hadExplosion = board => fields(board)
 const pendding = field => (field.mined && !field.falgged)
     || (!field.mined && !field.opened)
 const wonGame = board => fields(board).filter(pendding).length === 0
+const showMines = board => fields(board).filter(field => field.mined)
+    .forEach(field => field.opened = true)
 
-export {createMinedBoard}
+export {createMinedBoard,
+        cloneBoard,
+        openField,
+        hadExplosion,
+        wonGame,
+        showMines
+}
