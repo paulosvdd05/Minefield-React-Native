@@ -83,7 +83,7 @@ export default class App extends Component {
 
         <Header 
         flagsLeft={this.minesAmount() - flagsUsed(this.state.board)} o
-        nNewGame={()=>this.setState(this.createState)}
+        onNewGame={()=>this.setState(this.createState())}
         onFlagPress={() => this.setState({showLevelSelection: true})} />
 
         <View style={styles.board}>
